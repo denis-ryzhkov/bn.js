@@ -13,7 +13,7 @@ It was created to address the next issues of builtin MongoDB profiler:
 However bn() is not bound to MongoDB  
 and may be used in any (reasonably modern) JS environment.
 
-See test() for usage examples - https://github.com/denis-ryzhkov/bn.js/blob/master/bn.js#L93
+See test() for usage examples - https://github.com/denis-ryzhkov/bn.js/blob/master/bn.js#L116
 
 JS "bn" is an improved port of Python "bn" tool:  
 https://github.com/denis-ryzhkov/bn
