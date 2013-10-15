@@ -16,7 +16,7 @@ See test() for usage examples - https://github.com/denis-ryzhkov/bn.js/blob/mast
 JS "bn" is an improved port of Python "bn" tool:  
 https://github.com/denis-ryzhkov/bn
 
-bn.js version 0.1.0  
+bn.js version 0.1.1  
 https://github.com/denis-ryzhkov/bn.js  
 Copyright (C) 2013 by Denis Ryzhkov <denisr@denisr.com>  
 MIT License, see http://opensource.org/licenses/MIT
@@ -24,7 +24,12 @@ MIT License, see http://opensource.org/licenses/MIT
 
 //// Bn
 
-var Bn = function(total_key) {
+var Bn = function(config) {
+
+    //// Config.
+
+    config = config || {};
+    config.total_key = config.total_key || 'TOTAL';
 
     //// State.
 
@@ -64,7 +69,7 @@ var Bn = function(total_key) {
         stats.sort(function(a, b) {
             return a.millis < b.millis;
         });
-        stats.push({key: total_key || 'TOTAL', millis: total, percent: 100});
+        stats.push({key: config.total_key, millis: total, percent: 100});
         return stats;
     };
 
